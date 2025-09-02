@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Career Counselling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="vlogs.html">Vlogs</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container text-center">
+    <h1>User Reviews</h1>
+    <p>See what our users have to say about us.</p>
+  </section>
+
+  <section class="container">
+    <div id="reviewsList"></div>
+    
+    <div class="form-container">
+      <h2>Leave a Review</h2>
+      <form id="reviewForm">
+        <input type="text" id="reviewName" placeholder="Your Name" required>
+        <textarea id="reviewText" placeholder="Your Review" required></textarea>
+        <button type="submit" class="btn">Submit Review</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Career Counselling | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/reviews.js"></script>
+</body>
+</html>

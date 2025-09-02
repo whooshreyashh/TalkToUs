@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Session — TalkToUs</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TALKTOUS</a>
+
+      <!-- Hamburger -->
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="main-nav" id="mainNav" role="navigation" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html" class="active">Book a Session</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="vlogs.html">Vlogs/Activities</a></li>
+          <li><a href="index.html#contact" class="talktous">Talk to Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Section -->
+  <main>
+    <section class="section container booking-section">
+      <h2>Book a Session</h2>
+      <p class="section-sub">Scan the Paytm QR below to pay. After payment, fill the form to complete booking. Admin will verify manually.</p>
+
+      <div class="booking-grid">
+        <!-- QR Card -->
+        <div class="qr-card card">
+          <img src="assets/qr.png" alt="Paytm QR code" class="qr-img">
+          <p class="qr-note">Scan with Paytm → Pay → Note the Transaction ID</p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="bookingForm" class="card booking-form" autocomplete="off">
+          <label>
+            <span>Name</span>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </label>
+
+          <label>
+            <span>Phone</span>
+            <input type="tel" id="phone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+          </label>
+
+          <label>
+            <span>Preferred Date & Time</span>
+            <input type="datetime-local" id="slot" name="slot" required>
+          </label>
+
+          <label>
+            <span>Transaction ID (from Paytm)</span>
+            <input type="text" id="txn" name="txn" placeholder="TXN12345678" required>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Submit Booking</button>
+        </form>
+      </div>
+      <p class="small muted">Note: Payment verification is manual. Admin will confirm by email.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 TalkToUs — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Career Counselling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="admin.html">Dashboard</a></li>
+        <li><a href="vlogs.html">Vlogs</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h1 class="text-center">Admin Dashboard</h1>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <!-- Manage Bookings -->
+      <div class="card">
+        <h3>Manage Bookings</h3>
+        <div id="adminBookings"></div>
+      </div>
+
+      <!-- Manage Reviews -->
+      <div class="card">
+        <h3>Manage Reviews</h3>
+        <div id="adminReviews"></div>
+      </div>
+
+      <!-- Post New Vlog -->
+      <div class="card">
+        <h3>Post New Vlog</h3>
+        <form id="vlogForm">
+          <input type="text" id="vlogTitle" placeholder="Vlog Title" required>
+          <textarea id="vlogContent" placeholder="Vlog Content" required></textarea>
+          <button type="submit" class="btn">Publish</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Career Counselling | Admin Panel</p>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
