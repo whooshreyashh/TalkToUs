@@ -1,44 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Career Counselling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TalkToUs — Counseling & Career Guidance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Horizon&display=swap" rel="stylesheet">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="images/logo.png" alt="Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="vlogs.html">Vlogs</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">TALKTOUS
+      </a>
+
+      <!-- Hamburger -->
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="main-nav" id="mainNav" role="navigation" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="booking.html">Book a Session</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="vlogs.html">Vlogs/Activities</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="#contact" class="talktous">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="container text-center">
-    <h1>About Us</h1>
-    <p>We are a team of professional counsellors dedicated to guiding students and professionals towards successful careers.</p>
-  </section>
-
-  <section class="container grid">
-    <div class="card">
-      <h3>Our Mission</h3>
-      <p>To provide personalized and professional counselling services to empower individuals in their career journey.</p>
-    </div>
-    <div class="card">
-      <h3>Our Vision</h3>
-      <p>To be the leading counselling platform that transforms lives through informed career decisions.</p>
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-content">
+      <h1>About Talk2us</h1>
+      <p>We Listen & We Care</p>
     </div>
   </section>
 
+  <!-- Who We Are -->
+  <section class="about-section">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>
+        In a world where people are often too busy to pause and listen, we at Talk2us dedicate ourselves 
+        to listening deeply, understanding without judgment, and providing the support you need to navigate life’s challenges...
+      </p>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="vision-mission">
+    <div class="container cards">
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To empower individuals of all ages in Haldwani and beyond to discover their true potential...</p>
+      </div>
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>Empowering individuals through career guidance and psychological counselling to achieve growth, clarity, and success...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="our-story">
+    <div class="container story-layout">
+      <div class="story-img">
+        <img src="assets/story.jpg" alt="Our Story">
+      </div>
+      <div class="story-text">
+        <h2>Our Story</h2>
+        <p>
+          The journey of Talk2us began with a simple observation – despite growing awareness, mental health 
+          in smaller towns is still a taboo subject...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="our-team">
+    <div class="container">
+      <h2>Our Team</h2>
+      <p>
+        Our team is well-equipped with knowledge and experience, committed to provide personalized care and 
+        assist with various psycho-social issues such as anxiety, depression, and relationship challenges...
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="our-services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Career Guidance</h3>
+          <p>Psychometric testing, career mapping, subject selection, resume building & more.</p>
+        </div>
+        <div class="service-card">
+          <h3>Psychological Counseling</h3>
+          <p>Support for stress, anxiety, depression, family/relationship issues, and resilience.</p>
+        </div>
+        <div class="service-card">
+          <h3>Life Skills Training</h3>
+          <p>Study skills, time management, personality development, parenting workshops.</p>
+        </div>
+        <div class="service-card">
+          <h3>Workshops & Programs</h3>
+          <p>Seminars, corporate training, confidence-building, mindfulness & more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Career Counselling | All Rights Reserved</p>
+    <p>© 2025 Talk2us. All Rights Reserved.</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

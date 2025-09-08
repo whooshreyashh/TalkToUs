@@ -379,6 +379,73 @@ input:focus {
   font-size:1.05rem;
 }
 
+/* ---------- Seminars / Events Section ---------- */
+/* Seminar section grid */
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #ff6600; /* your theme color */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.seminar-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* text left, image right */
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.seminar-text h2 {
+  margin-bottom: 0.8rem;
+}
+
+.seminar-text p {
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.seminar-image img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px; /* fixed size for consistency */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .seminar-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .seminar-image img {
+    margin: 1rem auto 0;
+  }
+}
+
+
+
+
+
+
 /* ---------- Booking section ---------- */
 .booking-section .booking-grid{
   display:grid;
@@ -528,6 +595,14 @@ input:focus {
     transform: translate(0, 2rem); /* move slightly down on mobile */
   }
 
+  .seminars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seminar-card img.seminar-img {
+    height: 180px;
+  }
+
 }
 
 /* Very small screens */
@@ -536,3 +611,114 @@ input:focus {
   .hero h1{ font-size:2rem; }
   .btn{ font-size:0.95rem; padding:0.55rem 0.9rem; }
 }
+
+
+/* =======================
+   ABOUT PAGE STYLES
+   ======================= */
+
+.about-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f6f9ff, #eef3fc);
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #1f3c88;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.vision-box,
+.mission-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.vision-box h2,
+.mission-box h2 {
+  color: #1f3c88;
+  margin-bottom: 15px;
+}
+
+/* Our Story */
+.our-story {
+  background: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.our-story h2 {
+  margin-bottom: 20px;
+  color: #1f3c88;
+}
+
+.our-story p {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Team */
+.our-team {
+  padding: 60px 20px;
+}
+
+.our-team h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1f3c88;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
