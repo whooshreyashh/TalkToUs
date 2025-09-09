@@ -514,7 +514,7 @@ input:focus {
 /* Responsive */
 @media (max-width:720px) {
   .booking-container { padding:20px; }
-  .booking-title { font-size:1.5rem; }
+  .booking-title { font-size:2.9rem; }
 }
 
 
