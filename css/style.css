@@ -448,41 +448,76 @@ input:focus {
 
 
 /* ---------- Booking section ---------- */
-
-.booking-section .booking-grid{
-  display:grid;
-  grid-template-columns: 350px 1fr;
-  gap:1.25rem;
-  align-items:start;
-  margin-top:1rem;
+/* Booking Section */
+.booking-section { background: #f9fbff; padding: 56px 20px; }
+.booking-container {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 36px;
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(14,165,233,0.06);
+  font-family: 'Montserrat', sans-serif;
 }
-.qr-img{ width:100%; display:block; border-radius:10px; }
-.qr-note{ margin-top:0.6rem; color:#334155; font-size:0.95rem; }
+.booking-title { font-family: 'Bebas Neue', sans-serif; font-size: 2.9rem; color: #000000; text-align:center; margin-bottom:6px; }
+.booking-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #ff6600; /* your theme color */
+  margin: 0.5rem auto 1rem;
+  border-radius: 2px;
+}
+.booking-subtitle { font-family: 'Montserrat', sans-serif; text-align:center; color:#374151; margin-bottom:22px; }
 
-/* Booking form styles */
-.booking-form label{ display:block; margin-bottom:0.65rem; font-size:0.95rem; color:#0f172a; }
-.booking-form input,
+.booking-form .form-row { margin-bottom:16px; display:flex; flex-direction:column; }
+.booking-form label { font-family: 'Montserrat', sans-serif; margin-bottom:6px; font-weight:600; color:#0f172a; }
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
 .booking-form textarea,
-.booking-form select {
+.flatpickr-input {
   width:100%;
-  padding:0.8rem;
-  border-radius:8px;
-  border:1px solid var(--neutral);
-  background:#fff;
-  font-family:inherit;
-  font-size:0.98rem;
-  margin-bottom:0.8rem;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid var(--neutral, #E5E7EB);
+  font-size:1rem;
+  font-family: 'Montserrat', sans-serif;
+  background:white;
+  box-sizing:border-box;
 }
-.booking-form button{
-  width:100%;
-  padding:0.9rem;
+.booking-form textarea { font-family: 'Montserrat', sans-serif; min-height:110px; resize:vertical; }
+
+.note { font-size:0.88rem; color:#6b7280; margin-top:6px; display:block; }
+
+.booking-btn {
+  font-family: 'Montserrat', sans-serif;
+  margin-top:8px;
+  background:var(--primary, #1E3A8A);
+  color:white;
+  padding:12px 16px;
   border-radius:10px;
   border:0;
-  background:var(--primary);
-  color:var(--white);
-  font-size:1rem;
+  font-weight:600;
+  width:100%;
   cursor:pointer;
 }
+.booking-btn:hover { filter:brightness(.95); }
+
+/* Flatpickr specific tweaks */
+.flatpickr-input[readonly] { cursor:pointer; } /* ensure pointer */
+.flatpickr-calendar { z-index: 99999 !important; }
+
+/* Responsive */
+@media (max-width:720px) {
+  .booking-container { padding:20px; }
+  .booking-title { font-size:1.5rem; }
+}
+
+
 
 /* ---------- Footer ---------- */
 .site-footer{
@@ -621,9 +656,6 @@ input:focus {
 
 
 /* About Us Page Styles */
-
-
-
 .about-page {
   color: #1a1a2e;
   padding: 40px 20px;
@@ -732,9 +764,3 @@ input:focus {
   color: #fff;
   transform: translateY(-5px);
 }
-
-
-
-
-
-
