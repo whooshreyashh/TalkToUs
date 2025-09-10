@@ -54,7 +54,20 @@
     <h2 class="booking-title">Book a Counseling Session</h2>
     <p class="booking-subtitle">Choose your preferred time slot between <strong>10:00 AM</strong> and <strong>6:00 PM</strong></p>
 
-    <form id="bookingForm" class="booking-form" method="POST" action="https://formester.com/forms/AYGR6F5YT/submissions" autocomplete="off" novalidate>
+
+    
+      <script src="https://ubnnrqan.formester.com/widget/standard.js" type="module"></script>
+
+      <formester-standard-form
+        set-auto-height="true"
+        height="100%"
+        width="100%"
+        id="AYGR6F5YT"
+        url="https://ubnnrqan.formester.com/f/AYGR6F5YT"
+      ></formester-standard-form>
+    
+
+    <!-- <form id="bookingForm" class="booking-form" method="POST" action="https://formester.com/forms/AYGR6F5YT/submissions" autocomplete="off" novalidate>
       <div class="form-row">
         <label for="name">Full Name</label>
         <input id="name" name="name" type="text" placeholder="Your full name" required>
@@ -73,31 +86,31 @@
       <div class="form-row">
         <label for="date">Select Date</label>
         <!-- text input for flatpickr -->
-        <input id="date" name="date" type="text" placeholder="Choose date" readonly="false" required aria-label="Select date">
+        <!-- <input id="date" name="date" type="text" placeholder="Choose date" readonly="false" required aria-label="Select date">
       </div>
 
       <div class="form-row">
         <label for="time">Select Time</label>
         <!-- text input for flatpickr time -->
-        <input id="time" name="time" type="text" placeholder="Choose time" readonly="false" required aria-label="Select time">
+        <!-- <input id="time" name="time" type="text" placeholder="Choose time" readonly="false" required aria-label="Select time">
         <small class="note">Available only between 10:00 AM – 6:00 PM</small>
-      </div>
+      </div> -->
 
-      <div class="form-row">
+      <!-- <div class="form-row">
         <label for="message">Additional Notes (optional)</label>
         <textarea id="message" name="message" rows="4" placeholder="Any extra info..."></textarea>
-      </div>
+      </div> -->
 
-      <button type="submit" class="booking-btn">Confirm Booking</button>
+      <!-- <button type="submit" class="booking-btn">Confirm Booking</button>
       <p id="bookingStatus" class="small"></p>
-    </form>
+    </form> -->
   </div>
 
   <!-- Flatpickr JS (place before closing body) -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
 
   <!-- Initialization script -->
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
       const dateInput = document.getElementById('date');
       const timeInput = document.getElementById('time');
@@ -198,7 +211,7 @@
         status.textContent = '';
       });
     });
-  </script>
+  </script> -->
 </section>
 
 
