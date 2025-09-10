@@ -16,6 +16,17 @@
   --mobile-nav-width: 260px;
 }
 
+/* For Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
 /* ---------- Reset & base ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
@@ -469,7 +480,7 @@ input:focus {
   margin: 0.5rem auto 1rem;
   border-radius: 2px;
 }
-.booking-subtitle { font-family: 'Montserrat', sans-serif; text-align:center; color:#374151; margin-bottom:22px; }
+.booking-subtitle { font-family: 'Montserrat', sans-serif; text-align:center; color:#374151; }
 
 .booking-form .form-row { margin-bottom:16px; display:flex; flex-direction:column; }
 .booking-form label { font-family: 'Montserrat', sans-serif; margin-bottom:6px; font-weight:600; color:#0f172a; }
@@ -764,3 +775,4 @@ input:focus {
   color: #fff;
   transform: translateY(-5px);
 }
+
