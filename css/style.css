@@ -209,6 +209,10 @@ input:focus {
 .hero-text{
   transform: translateX(-2rem);
 }
+.hero-text a {
+  position: relative;
+  z-index: 2;
+}
 .hero h1{
   font-size:4.4rem;
   line-height:1;
@@ -794,6 +798,12 @@ input:focus {
   .hero-text{
   transform: none;
 }
+
+.hero-text a {
+  position: relative;
+  z-index: 2;
+}
+
 
   .hero h1{ font-size: 2.4rem; }
   .hero p{ font-size:1.1rem; }

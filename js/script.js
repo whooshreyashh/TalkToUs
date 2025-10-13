@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Popup open + image loading (manual demo)
-document.querySelectorAll('.btn').forEach((btn, index) => {
+document.querySelectorAll('').forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     const popup = document.getElementById('popupOverlay');
