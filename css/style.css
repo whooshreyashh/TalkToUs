@@ -384,6 +384,12 @@ input:focus {
   font-size:1.05rem;
 }
 
+
+
+
+
+
+
 /* ---------- Seminars / Events Section ---------- */
 /* Seminar section grid */
 .page-title {
@@ -434,6 +440,162 @@ input:focus {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+/* Popup overlay (background blur + center layout) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Active (visible) state */
+.popup-overlay.active {
+  display: flex;
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* Popup content container */
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeInUp 0.4s ease;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #5A7EDC;
+}
+
+/* Gallery grid inside popup */
+.popup-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Individual photo */
+.popup-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popup-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* Fullscreen image view */
+.fullscreen-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-view.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fullscreen-view img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  z-index: 2100;
+}
+
+.fullscreen-close:hover {
+  color: #1565c0;
+}
+
+@media (max-width: 600px) {
+  .fullscreen-view img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+
+  .fullscreen-close {
+    font-size: 1.6rem;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .popup-content {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .popup-gallery img {
+    height: 140px;
+  }
+}
 
 /* Responsive: stack on mobile */
 @media (max-width: 768px) {
@@ -446,6 +608,9 @@ input:focus {
     margin: 1rem auto 0;
   }
 }
+
+
+
 
 
 
@@ -521,6 +686,10 @@ input:focus {
   .booking-container { padding:20px; }
   .booking-title { font-size:2.9rem; }
 }
+
+
+
+
 
 
 
@@ -769,4 +938,145 @@ input:focus {
   color: #fff;
   transform: translateY(-5px);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Donation Page Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222;
+}
+
+.join-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 8%;
+  box-sizing: border-box;
+}
+
+/* Left: Join form */
+.join-form {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 3rem;
+}
+
+.join-form h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #000000; /* your blue theme */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.join-form p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form button {
+  background-color: #5a7edc;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #4a6ac5;
+}
+
+/* Right: Donate */
+.donate-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  padding-left: 3rem;
+  border-left: 2px solid #e5e5e5;
+}
+
+.donate-section h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #000000;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.donate-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.donate-section img {
+  width: 250px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .join-container {
+    flex-direction: column;
+    padding: 2rem 6%;
+  }
+
+  .join-form, .donate-section {
+    padding: 0;
+    border: none;
+  }
+
+  .donate-section {
+    margin-top: 3rem;
+  }
+
+  .join-form h1, .donate-section h1 {
+    text-align: center;
+  }
+}
+
+
+
+
 

@@ -78,3 +78,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+// Popup open + image loading (manual demo)
+document.querySelectorAll('.btn').forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const popup = document.getElementById('popupOverlay');
+    const gallery = document.getElementById('popupGallery');
+    const title = document.getElementById('popupTitle');
+
+    // Example setup (you can change folder path for each activity)
+    const imageSets = [
+      'assets/activity1/',
+      'assets/activity2/',
+    ];
+
+    const activityTitles = [
+      'Career Guidance Workshop',
+      'Mental Health Awareness Camp'
+    ];
+
+    // Images assumed to be named photo1.jpg, photo2.jpg, ...
+    const folder = imageSets[index];
+    const numImages = 8; // change as needed
+    gallery.innerHTML = ''; // clear previous images
+    title.textContent = activityTitles[index];
+
+    for (let i = 1; i <= numImages; i++) {
+      const img = document.createElement('img');
+      img.src = `${folder}photo${i}.jpg`;
+      img.alt = `Activity photo ${i}`;
+      gallery.appendChild(img);
+    }
+
+    popup.classList.add('active');
+  });
+});
+
+// Popup close
+document.getElementById('popupClose').addEventListener('click', () => {
+  document.getElementById('popupOverlay').classList.remove('active');
+});
+
+// Fullscreen image view
+const fullscreenView = document.getElementById('fullscreenView');
+const fullscreenImg = document.getElementById('fullscreenImg');
+const fullscreenClose = document.getElementById('fullscreenClose');
+
+// Click on gallery image → open fullscreen
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#popupGallery img')) {
+    fullscreenImg.src = e.target.src;
+    fullscreenView.classList.add('active');
+  }
+});
+
+// Close fullscreen on × button or overlay click
+fullscreenClose.addEventListener('click', () => fullscreenView.classList.remove('active'));
+fullscreenView.addEventListener('click', (e) => {
+  if (e.target === fullscreenView) fullscreenView.classList.remove('active');
+});
