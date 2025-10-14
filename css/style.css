@@ -373,21 +373,6 @@ input:focus {
 }
 
 
-/* ---------- Services ---------- */
-.services-grid{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:1rem;
-  margin-top:1rem;
-}
-.service{
-  background:var(--white);
-  border-radius:12px;
-  padding:1.25rem;
-  box-shadow: 0 6px 18px rgba(14,165,233,0.05);
-  font-size:1.05rem;
-}
-
 
 
 
@@ -1096,3 +1081,96 @@ form button:hover {
 
 
 
+
+
+/* services-section */
+.services-section {
+  width: 100%;
+  padding: 60px;
+}
+.services-section h1{
+  color: #000000;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Each Service */
+.service {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.service h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 1.2rem;
+  color: #222;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .service h2 {
+    font-size: 1.8rem;
+  }
+
+  .service p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 40px 6%;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .service {
+    margin-bottom: 40px;
+  }
+
+  .service h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* home-page-services-section */
+/* ---------- Services ---------- */
+.services1-grid{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:2rem;
+  margin-top:2rem;
+}
+.service1{
+  background:var(--white);
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow: 0 6px 18px rgba(1, 28, 40, 0.05);
+  font-size:1.05rem;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+  .services1-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}

@@ -3,46 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Career Counselling</title>
+  <title>Our Services | Talk2Us</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <img src="images/logo.png" alt="Logo" class="logo">
-      <ul>
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">TALK2US</a>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-hidden="true">
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="booking.html">Book a Session</a></li>
           <li><a href="vlogs.html">Vlogs/Activities</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
           <li><a href="donate.html">Support</a></li>
           <li><a href="contact.html" class="active">Contact Us</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <section class="container text-center">
-    <h1>Our Services</h1>
-    <p>Choose from a wide range of counselling services tailored for you.</p>
-  </section>
+  <main class="container">
 
-  <section class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-    <div class="card">
-      <h3>Career Guidance</h3>
-      <p>Get personalized career counselling sessions to discover the best path forward.</p>
+    <section class="services-section">
+    <h1 class="page-title">Our Services</h1>
+    <!-- <p class="page-subtitle">Guiding minds. Empowering lives. Supporting growth.</p> -->
+
+    <div class="service">
+      <h2>Career Guidance & Counselling</h2>
+      <p>We help students and professionals identify their true strengths and make informed career choices through psychometric tests, counselling sessions, and personalized planning.</p>
     </div>
-    <div class="card">
-      <h3>Study Abroad Counselling</h3>
-      <p>Expert advice on university selection, applications, and scholarships.</p>
+
+    <div class="service">
+      <h2>Psychological Counselling & Mental Health Support</h2>
+      <p>Offering professional help for anxiety, depression, and emotional distress through evidence-based therapeutic approaches that promote well-being and resilience.</p>
     </div>
-    <div class="card">
-      <h3>Interview Preparation</h3>
-      <p>Mock interviews, resume building, and communication skills training.</p>
+
+    <div class="service">
+      <h2>Adolescent & Child Counselling</h2>
+      <p>Supporting children and adolescents in managing academic stress, emotional regulation, and behavioral challenges with a compassionate and child-friendly approach.</p>
+    </div>
+
+    <div class="service">
+      <h2>Family & Relationship Counselling</h2>
+      <p>Helping families and couples resolve conflicts, build better communication, and strengthen emotional bonds in a safe and confidential environment.</p>
+    </div>
+
+    <div class="service">
+      <h2>Educational & Life Skills Training</h2>
+      <p>Training sessions on study habits, time management, confidence building, and communication to empower individuals with essential life skills.</p>
+    </div>
+
+    <div class="service">
+      <h2>Workshops & Group Programs</h2>
+      <p>Conducting workshops on motivation, mindfulness, and emotional well-being for students, teachers, and professionals to promote mental wellness and productivity.</p>
+    </div>
+
+    <div class="service">
+      <h2>Corporate Training & Wellness</h2>
+      <p>Customized corporate sessions to enhance emotional intelligence, stress management, and workplace well-being among employees and management teams.</p>
+    </div>
+
+    <div class="service">
+      <h2>Parenting Workshops</h2>
+      <p>Guiding parents to understand their child’s emotional and behavioral development, promoting healthier family communication and relationships.</p>
     </div>
   </section>
+  </main>
 
-  <footer>
-    <p>© 2025 Career Counselling | All Rights Reserved</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Talk2Us — All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="js/script.js"></script> 
+
 </body>
 </html>
