@@ -299,6 +299,139 @@ input:focus {
 
 
 /* ---------- Sections ---------- */
+
+
+body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #252525;
+}
+
+.hero2-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: 0 4px 24px rgba(50, 50, 50, 0.08);
+    overflow: hidden;
+}
+
+.left,
+.right {
+    flex: 1;
+    min-width: 320px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    background: #f8fafb;
+    padding: 0;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 26px;
+    object-fit: cover;
+    box-shadow: none;
+    display: block;
+    max-height: 520px;
+}
+
+.right {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #556185;
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.heading {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #172153;
+    margin: 0 0 18px 0;
+    line-height: 1.1;
+}
+
+.desc {
+    color: #32436E;
+    font-size: 1.14rem;
+    margin-bottom: 18px;
+    max-width: 440px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.features li {
+    font-size: 1.07rem;
+    margin-bottom: 14px;
+    color: #1A285D;
+    display: flex;
+    align-items: flex-start;
+}
+
+.tick {
+    color: #FFD436;
+    font-size: 1.15em;
+    margin-right: 12px;
+    margin-top: 2px;
+}
+
+.book-btn {
+    background: #1A285D;
+    color: #ffffff;
+    font-size: 1.12rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+
+.book-btn:hover,
+.book-btn:focus {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+        max-width: 97vw;
+    }
+    .left, .right {
+        padding: 26px;
+    }
+    .main-image {
+        max-height: 320px;
+        width: 100%;
+    }
+}
+
+
+
+
 .section{ padding:3rem 0; text-align:center; }
 .section h2{
   font-size:2rem;
@@ -307,7 +440,7 @@ input:focus {
   font-family:'Bebas Neue', sans-serif;
 }
 .section-sub{
-  color: #374151;
+  color: #555555;
   margin-bottom:2rem;
   font-size:1.25rem;
 }
@@ -869,8 +1002,71 @@ input:focus {
 }
 .about-section {
   margin-bottom: 50px;
+  width: 100%;
+  /* No need for extra padding here */
 }
 
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-photo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.about-photo img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #f4f4f4;
+  box-shadow: 0 4px 18px rgba(40,60,140,0.14);
+}
+
+.about-caption {
+  margin-top: 18px;
+  font-size: 1.13rem;
+  color: #162447;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-caption span {
+  display: block;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .about-photo img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Existing styles for headings and text */
 .about-section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
@@ -891,6 +1087,7 @@ input:focus {
   font-weight: 600;
   color: #000000;
 }
+
 
 .about-section ul {
   font-family: 'Montserrat', sans-serif;
@@ -1086,45 +1283,64 @@ form button:hover {
 /* services-section */
 .services-section {
   width: 100%;
-  padding: 60px;
-}
-.services-section h1{
-  color: #000000;
-  font-family: 'Bebas Neue', sans-serif;
+  /* Remove grid from here! */
 }
 
-/* Each Service */
-.service {
+/* New grid container for cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover,
+.service-card:focus {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
+}
+
+.service-image {
   width: 100%;
-  margin-bottom: 60px;
+  height: 400px;
+  object-fit: cover;
 }
 
-.service h2 {
+.service-content {
+  padding: 20px;
+}
+
+.service-content h2 {
   font-family: 'Bebas Neue', sans-serif;
-  color: #333;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
+  color: #333;
 }
 
-.service p {
-  font-size: 1.2rem;
+.service-content p {
+  font-size: 1rem;
   color: #222;
   max-width: 100%;
-  margin-bottom: 2rem;
 }
 
-/* Responsive Design */
+/* Responsive adjustments */
 @media (max-width: 992px) {
-  .page-title {
-    font-size: 2.5rem;
+  .service-content h2 {
+    font-size: 1.5rem;
   }
-
-  .service h2 {
-    font-size: 1.8rem;
-  }
-
-  .service p {
-    font-size: 1rem;
+  .service-content p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1132,17 +1348,8 @@ form button:hover {
   .services-section {
     padding: 40px 6%;
   }
-
-  .page-title {
-    font-size: 2.2rem;
-  }
-
-  .service {
-    margin-bottom: 40px;
-  }
-
-  .service h2 {
-    font-size: 1.5rem;
+  .service-content h2 {
+    font-size: 1.3rem;
   }
 }
 
